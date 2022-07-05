@@ -103,6 +103,25 @@ $$
 $$;
 
 -- ===================================================================================
+-- Description: Overload of DAYNAME_LONG_UDF that applies the default case (only the first letter in uppercase) to the result
+-- Parameters:
+--      1. INPUT: the date to take the dayname of
+-- Example:
+-- Input:
+--      select PUBLIC.DAYNAME_LONG_UDF(date '2022-06-30');
+-- Results:
+--      'Thursday'
+-- ===================================================================================
+CREATE OR REPLACE FUNCTION PUBLIC.DAYNAME_LONG_UDF(INPUT TIMESTAMP_TZ)
+RETURNS VARCHAR(10)
+LANGUAGE SQL
+IMMUTABLE
+AS
+$$
+    PUBLIC.DAYNAME_LONG_UDF(INPUT, 'firstOnly')
+$$;
+
+-- ===================================================================================
 -- Description: Emulates the format element DL in Teradata, which represents a date as 'Day, Month DD, YYYY'
 -- Parameters:
 --      1. INPUT: The date to represent in date long format
