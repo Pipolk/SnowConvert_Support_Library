@@ -12,7 +12,7 @@ import sys
 
 from setuptools import setup
 
-DEPLOY_VERSION = '0.0.11'
+DEPLOY_VERSION = '0.0.14'
 
 CLASSIFIERS = [
     'Development Status :: 3 - Alpha',
@@ -26,7 +26,7 @@ CLASSIFIERS = [
 ]
 
 DEPENDENCIES = [
-    'snowflake-connector-python>=2.4.6',
+    'snowflake-connector-python>=2.7.7',
     'oscrypto>=1.2.1'
 ]
 

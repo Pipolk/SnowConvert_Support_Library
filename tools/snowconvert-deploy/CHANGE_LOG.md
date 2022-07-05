@@ -27,3 +27,19 @@
 ## Version 0.0.11
 
 - Schema parameter was not properly passed in connection call
+
+## Version 0.0.12
+
+- Path corrected so the tool can locate the snowsql config file
+- Added an option to prompt for password if it was not provided
+
+## Version 0.0.13
+
+- Compatibility with SnowSQL Environment Variables
+- Ability to use ~/.snowsql/config parameters
+- Folder Sync Feature
+- Some Pylint fixes
+
+## Version 0.0.14
+
+- Fixing issue with files in UTF-8 with BOM
